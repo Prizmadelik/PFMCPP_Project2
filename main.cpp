@@ -89,7 +89,7 @@ void variableDeclarations()
     bool isHealthy = false;
     
     ignoreUnused(number, age, score, repetition, taxRate, weightInOunces, costOfCheese,
-        pi, distanceInKm, gramsOfGold, numberOfYears, carMileage, salesProfit, grade, fuelTank, shirtSize); //passing each variable declared to the ignoreUnused() function
+        pi, distanceInKm, gramsOfGold, numberOfYears, carMileage, salesProfit, grade, fuelTank, shirtSize, isPossible, isWellWritten, isHealthy); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -135,6 +135,8 @@ int weightLoss (int numOfDays = 5, int targetWeight = 155)
 double subscription (double annualPrice = 199.99, double serviceFee = 3.99)
 {
     ignoreUnused (annualPrice, serviceFee);
+
+    return{};
 }
 
 /*
