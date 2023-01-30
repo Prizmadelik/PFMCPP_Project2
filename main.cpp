@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
+ int
+ unsigned int
+ double
+ float
+ char
+ bool
  
  
  
@@ -64,10 +64,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int age = 70;
+    int score = 95;
+    int repetition = 8;
 
+    float taxRate = 9.5f;
+    float weightInOunces = 3.5f;
+    float costOfCheese = 4.5f;
+
+    double pi = 3.14;
+    double distanceInKm = 2.20;
+    double gramsOfGold = 15.77;
+
+    unsigned int numberOfYears = 20;
+    unsigned int carMileage = 5760;
+    unsigned int salesProfit = 3550;
+
+    char grade = 'A';
+    char fuelTank = 'E';
+    char shirtSize = 'M';
+
+    bool isPossible = true;
+    bool isWellWritten = true;
+    bool isHealthy = false;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, score, repetition, taxRate, weightInOunces, costOfCheese,
+        pi, distanceInKm, gramsOfGold, numberOfYears, carMileage, salesProfit, grade, fuelTank, shirtSize); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -82,44 +104,95 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
+void bachelorsDegree (int amountInYears = 4, bool livesOnCampus = 1 )
+{
+    ignoreUnused (amountInYears, livesOnCampus);
+}
 
 /*
- 2)
+ 2) 
  */
+void dayCare (int costPerHour = 50, int numOfHours = 8)
+{
+    ignoreUnused (costPerHour, numOfHours);
+}
 
 /*
- 3)
+ 3) 
  */
+int weightLoss (int numOfDays = 5, int targetWeight = 155)
+{
+    ignoreUnused (numOfDays, targetWeight);
+
+    return {};
+}
 
 /*
- 4)
+ 4) 
  */
+double subscription (double annualPrice = 199.99, double serviceFee = 3.99)
+{
+    ignoreUnused (annualPrice, serviceFee);
+}
 
 /*
- 5)
+ 5) 
  */
+int schoolLocation (int numOfMiles = 17, bool traffic = 1)
+{
+    ignoreUnused (numOfMiles, traffic);
+
+    return {};
+}
 
 /*
- 6)
+ 6) 
  */
+double salePrice (double originalCost = 19.99, double promoSale = 0.5)
+{
+    ignoreUnused (originalCost, promoSale);
+
+    return{};
+}
 
 /*
- 7)
+ 7) 
  */
+void projectManagement ( int teamMembers = 9, int dueDateInWeeks = 8)
+{
+    ignoreUnused (teamMembers, dueDateInWeeks);
+}
 
 /*
- 8)
+ 8) 
  */
+double rentalProperties (int yearBuilt = 1989, double sizeOfLandInSqFt = 5367.98)
+{
+    ignoreUnused (yearBuilt, sizeOfLandInSqFt);
+
+    return {};
+}
 
 /*
- 9)
+ 9) 
  */
+int analogConsole (int numOfChannels = 16, bool phantomPower = 1)
+{
+ignoreUnused (numOfChannels, phantomPower);
+
+    return {};
+}
 
 /*
  10)
  */
+void schoolGrade (int quizScore = 100, char passingGrade = 'A')
+{
+    ignoreUnused (quizScore, passingGrade);
+
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -140,28 +213,29 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
-    
-    //2)
-    
-    //3)
-    
-    //4)
-    
-    //5)
-    
+    //1) 
+        bachelorsDegree (4, 1);
+    //2) 
+        dayCare (50, 8);
+    //3) 
+        auto goalThisYear = weightLoss (5, 155);
+    //4) 
+        auto internet = subscription (199.99, 3.99); 
+    //5) 
+        auto distanceToSchool = schoolLocation (17, 1); 
     //6)
-    
+        auto blackFriday = salePrice (19.99, 0.5);
     //7)
-    
+        projectManagement (9, 8);
     //8)
-    
+        auto realEstateMarket = rentalProperties (1989, 5367.98);
     //9)
-    
+        auto drumRecording = analogConsole (16, 1);
     //10)
     
+        
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, goalThisYear, internet, distanceToSchool, blackFriday, realEstateMarket, drumRecording);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
