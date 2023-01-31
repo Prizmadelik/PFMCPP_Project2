@@ -106,7 +106,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1) 
  */
-void bachelorsDegree (int amountInYears = 4, bool livesOnCampus = 1 )
+void attendSchool (int amountInYears = 4, bool livesOnCampus = 1 )
 {
     ignoreUnused (amountInYears, livesOnCampus);
 }
@@ -114,7 +114,7 @@ void bachelorsDegree (int amountInYears = 4, bool livesOnCampus = 1 )
 /*
  2) 
  */
-void dayCare (int costPerHour = 50, int numOfHours = 8)
+void babysit (int costPerHour = 50, int numOfHours = 8)
 {
     ignoreUnused (costPerHour, numOfHours);
 }
@@ -122,7 +122,7 @@ void dayCare (int costPerHour = 50, int numOfHours = 8)
 /*
  3) 
  */
-int weightLoss (int numOfDays = 5, int targetWeight = 155)
+int goToTheGym (int numOfDays = 5, int targetWeight = 155)
 {
     ignoreUnused (numOfDays, targetWeight);
 
@@ -132,7 +132,7 @@ int weightLoss (int numOfDays = 5, int targetWeight = 155)
 /*
  4) 
  */
-double subscription (double annualPrice = 199.99, double serviceFee = 3.99)
+double subscribeToProgram (double annualPrice = 199.99, double serviceFee = 3.99)
 {
     ignoreUnused (annualPrice, serviceFee);
 
@@ -142,7 +142,7 @@ double subscription (double annualPrice = 199.99, double serviceFee = 3.99)
 /*
  5) 
  */
-int schoolLocation (int numOfMiles = 17, bool traffic = 1)
+int driveToSchool (int numOfMiles = 17, bool traffic = 1)
 {
     ignoreUnused (numOfMiles, traffic);
 
@@ -152,7 +152,7 @@ int schoolLocation (int numOfMiles = 17, bool traffic = 1)
 /*
  6) 
  */
-double salePrice (double originalCost = 19.99, double promoSale = 0.5)
+double offerSale (double originalCost = 19.99, double promoSale = 0.5)
 {
     ignoreUnused (originalCost, promoSale);
 
@@ -162,7 +162,7 @@ double salePrice (double originalCost = 19.99, double promoSale = 0.5)
 /*
  7) 
  */
-void projectManagement ( int teamMembers = 9, int dueDateInWeeks = 8)
+void manageProject ( int teamMembers = 9, int dueDateInWeeks = 8)
 {
     ignoreUnused (teamMembers, dueDateInWeeks);
 }
@@ -170,7 +170,7 @@ void projectManagement ( int teamMembers = 9, int dueDateInWeeks = 8)
 /*
  8) 
  */
-double rentalProperties (int yearBuilt = 1989, double sizeOfLandInSqFt = 5367.98)
+double buyProperties (int yearBuilt = 1989, double sizeOfLandInSqFt = 5367.98)
 {
     ignoreUnused (yearBuilt, sizeOfLandInSqFt);
 
@@ -180,7 +180,7 @@ double rentalProperties (int yearBuilt = 1989, double sizeOfLandInSqFt = 5367.98
 /*
  9) 
  */
-int analogConsole (int numOfChannels = 16, bool phantomPower = 1)
+int bookStudio (int numOfChannels = 16, bool phantomPower = 1)
 {
 ignoreUnused (numOfChannels, phantomPower);
 
@@ -190,7 +190,7 @@ ignoreUnused (numOfChannels, phantomPower);
 /*
  10)
  */
-void schoolGrade (int quizScore = 100, char passingGrade = 'A')
+void passTheClass (int quizScore = 100, char passingGrade = 'A')
 {
     ignoreUnused (quizScore, passingGrade);
 
@@ -216,28 +216,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1) 
-        bachelorsDegree (4, 1);
+    attendSchool (4, 1);
     //2) 
-        dayCare (50, 8);
+    babysit (50, 8);
     //3) 
-        auto goalThisYear = weightLoss (5, 155);
+    auto exercise = goToTheGym (5, 155);
     //4) 
-        auto internet = subscription (199.99, 3.99); 
+    auto learnProgramming = subscribeToProgram (199.99, 3.99); 
     //5) 
-        auto distanceToSchool = schoolLocation (17, 1); 
+    auto leaveEarly = driveToSchool (17, 1); 
     //6)
-        auto blackFriday = salePrice (19.99, 0.5);
+    auto buyClearanceItems = offerSale (19.99, 0.5);
     //7)
-        projectManagement (9, 8);
+    manageProject (9, 8);
     //8)
-        auto realEstateMarket = rentalProperties (1989, 5367.98);
+    auto investFunds = buyProperties (1989, 5367.98);
     //9)
-        auto drumRecording = analogConsole (16, 1);
+    auto recordMusic = bookStudio (16, 1);
     //10)
     
         
     
-    ignoreUnused(carRented, goalThisYear, internet, distanceToSchool, blackFriday, realEstateMarket, drumRecording);
+    ignoreUnused(carRented, attendSchool, babysit, exercise, learnProgramming, leaveEarly, buyClearanceItems, manageProject, investFunds, recordMusic);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
